@@ -10,14 +10,26 @@ export default {
   props: {
     local: Object
   },
+  data() {
+    return {
+      statusShow: false
+    };
+  },
+  created() {
+    // if (localStorage.getItem("showsettings")) {
+    //   this.showsettings = localStorage.getItem("showsettings");
+    // }
+  },
   methods: {
     showSettings: function() {
       let settings = document.querySelector("#settings");
       if (!this.statusShow) {
-        settings.style = "right:0px";
+        settings.style =
+          "width: 250px; padding-left: 16px; padding-right: 16px; opacity: 1";
         this.statusShow = true;
       } else {
-        settings.style = "right:-260px";
+        settings.style =
+          "width: 0px; padding-left: 0px; padding-right: 0px; opacity: 0;";
         this.statusShow = false;
       }
     }

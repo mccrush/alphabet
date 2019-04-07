@@ -1,5 +1,5 @@
 <template>
-  <div id="settings" class="settings shadow bg-white pt-5 pl-3 pr-3">
+  <div id="settings" class="settings shadow bg-white pt-5">
     <form class="mt-3">
       <div class="form-group">
         <label for="selectlanguage">{{local.selectlanguage.title}}</label>
@@ -16,7 +16,9 @@
 
       <button class="btn btn-success btn-block btn-sm" @click.prevent="saveSettings">{{local.buttonsave}}</button>
     </form>
-    <div v-html="local.descriptionapp" class="mt-3"></div>
+    <hr>
+    <button class="btn btn-light btn-sm btn-block dropdown-toggle mt-3" type="button" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings">О приложении</button>
+    <div v-html="local.descriptionapp" class="mt-3 collapse" id="collapseSettings"></div>
   </div>
 </template>
 
@@ -56,12 +58,14 @@ export default {
 
 <style scoped>
 .settings {
-  width: 250px;
+  width: 0px;
   height: 100%;
   position: absolute;
   top: 0px;
-  right: -260px;
+  right: 0px;
   transition: 0.3s;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .form-control:focus {
   outline: none;

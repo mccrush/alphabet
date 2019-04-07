@@ -7,7 +7,9 @@
     </div>-->
     <router-view :local="local"/>
     <Footer :local="local"/>
+
     <Settings :local="local"/>
+
     <Modal :local="local"/>
     <FullScreen :local="local"/>
   </div>
@@ -60,5 +62,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>

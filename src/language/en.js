@@ -24,5 +24,6 @@ export default {
   selectdelay: {
     title: 'Delay',
     delay: 2000
-  }
+  },
+  buttonaboutapp: 'About application'
 }

@@ -17,7 +17,7 @@
       <button class="btn btn-success btn-block btn-sm" @click.prevent="saveSettings">{{local.buttonsave}}</button>
     </form>
     <hr>
-    <button class="btn btn-light btn-sm btn-block dropdown-toggle mt-3" type="button" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings">О приложении</button>
+    <button class="btn btn-light btn-sm btn-block dropdown-toggle mt-3" type="button" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="false" aria-controls="collapseSettings">{{local.buttonaboutapp}}</button>
     <div v-html="local.descriptionapp" class="mt-3 collapse" id="collapseSettings"></div>
   </div>
 </template>

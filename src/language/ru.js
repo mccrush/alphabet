@@ -25,5 +25,6 @@ export default {
   selectdelay: {
     title: 'Задержка',
     delay: 2000
-  }
+  },
+  buttonaboutapp: 'О приложении'
 }

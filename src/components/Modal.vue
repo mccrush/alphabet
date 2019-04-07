@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     closeModalWindowForeve: function() {
-      localStorage.setItem("showmodal", false);
+      localStorage.setItem("showmodal_alphabet", false);
     }
   }
 };

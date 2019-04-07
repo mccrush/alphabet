@@ -39,8 +39,10 @@ export default {
   },
   created() {
     // Если есть настройки, то берем значение языка
-    if (localStorage.getItem("settings")) {
-      if (JSON.parse(localStorage.getItem("settings")).language == "Ru") {
+    if (localStorage.getItem("settings_alphabet")) {
+      if (
+        JSON.parse(localStorage.getItem("settings_alphabet")).language == "Ru"
+      ) {
         this.local = Ru;
       } else {
         this.local = En;
@@ -52,8 +54,8 @@ export default {
     $(function() {
       $('[data-toggle="tooltip"]').tooltip();
       if (
-        !localStorage.getItem("showmodal") ||
-        localStorage.getItem("showmodal") == true
+        !localStorage.getItem("showmodal_alphabet") ||
+        localStorage.getItem("showmodal_alphabet") == true
       ) {
         $("#modalWindow").modal("show");
       }

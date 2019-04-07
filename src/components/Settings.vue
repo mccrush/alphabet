@@ -35,8 +35,8 @@ export default {
     };
   },
   created() {
-    if (localStorage.getItem("settings")) {
-      this.settings = JSON.parse(localStorage.getItem("settings"));
+    if (localStorage.getItem("settings_alphabet")) {
+      this.settings = JSON.parse(localStorage.getItem("settings_alphabet"));
       this.lang = this.settings.language;
       this.delay = this.settings.delay;
     } else {
@@ -49,7 +49,7 @@ export default {
       } else {
       }
       this.settings.delay = this.delay;
-      localStorage.setItem("settings", JSON.stringify(this.settings));
+      localStorage.setItem("settings_alphabet", JSON.stringify(this.settings));
       location.reload();
     }
   }

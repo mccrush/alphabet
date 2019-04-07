@@ -29,8 +29,8 @@ export default {
     };
   },
   created() {
-    if (localStorage.getItem("settings")) {
-      this.settings = JSON.parse(localStorage.getItem("settings"));
+    if (localStorage.getItem("settings_alphabet")) {
+      this.settings = JSON.parse(localStorage.getItem("settings_alphabet"));
       this.delay = this.settings.delay;
     }
   },

@@ -14,14 +14,74 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: function () { 
-        return import(/* webpackChunkName: "about" */ './views/About.vue')
-      }
+      path: '/index.html',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/index.html?',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/alphabet/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/alphabet/?',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/alphabet/index.html',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/alphabet/index.html?',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/ab/index.html',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/ab/index.html?',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/ab/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/app/ab/',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/ab/?',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/app/ab/?',
+      name: 'home',
+      component: Home
     }
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   // route level code-splitting
+    //   // this generates a separate chunk (about.[hash].js) for this route
+    //   // which is lazy-loaded when the route is visited.
+    //   component: function () { 
+    //     return import(/* webpackChunkName: "about" */ './views/About.vue')
+    //   }
+    // }
   ]
 })

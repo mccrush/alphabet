@@ -27,11 +27,15 @@ export default {
     launchFullScreen(element) {
       if (element.webkitRequestFullScreen) {
         element.webkitRequestFullScreen();
+        let navbarTop = document.querySelector("#navbarTop");
+        navbarTop.style = "display: none;";
       }
     },
     cancelFullscreen() {
       if (document.webkitCancelFullScreen) {
         document.webkitCancelFullScreen();
+        let navbarTop = document.querySelector("#navbarTop");
+        navbarTop.style = "display: flex;";
       }
     }
   }

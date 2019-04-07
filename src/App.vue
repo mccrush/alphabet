@@ -1,31 +1,61 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <Navbar :local="local"/>
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    </div>-->
+    <router-view :local="local"/>
+    <Footer :local="local"/>
+    <Settings :local="local"/>
+    <Modal :local="local"/>
   </div>
 </template>
+<script>
+import En from "@/language/en.js";
+import Ru from "@/language/ru.js";
+
+import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
+import Settings from "@/components/Settings.vue";
+import Modal from "@/components/Modal.vue";
+
+export default {
+  components: {
+    Navbar,
+    Footer,
+    Settings,
+    Modal
+  },
+  data() {
+    return {
+      local: {}
+    };
+  },
+  created() {
+    // Если есть настройки, то берем значение языка
+    if (localStorage.getItem("settings")) {
+      if (JSON.parse(localStorage.getItem("settings")).language == "Ru") {
+        this.local = Ru;
+      } else {
+        this.local = En;
+      }
+    } else {
+      this.local = En;
+    }
+
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+      if (
+        !localStorage.getItem("showmodal") ||
+        localStorage.getItem("showmodal") == true
+      ) {
+        $("#modalWindow").modal("show");
+      }
+    });
+  }
+};
+</script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

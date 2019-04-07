@@ -9,6 +9,7 @@
     <Footer :local="local"/>
     <Settings :local="local"/>
     <Modal :local="local"/>
+    <FullScreen :local="local"/>
   </div>
 </template>
 <script>
@@ -19,13 +20,15 @@ import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 import Settings from "@/components/Settings.vue";
 import Modal from "@/components/Modal.vue";
+import FullScreen from "@/components/FullScreen.vue";
 
 export default {
   components: {
     Navbar,
     Footer,
     Settings,
-    Modal
+    Modal,
+    FullScreen
   },
   data() {
     return {

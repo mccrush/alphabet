@@ -3,6 +3,11 @@
   "short_name": "Алфавит",
   "icons": [
     {
+      "src": "./img/icons/logo.svg",
+      "sizes": "32x32",
+      "type": "image/svg+xml"
+    },
+    {
       "src": "./img/icons/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"

@@ -20,5 +20,9 @@ export default {
     left: 'L',
     right: 'R',
     both: 'B'
+  },
+  selectdelay: {
+    title: 'Delay',
+    delay: 2000
   }
 }

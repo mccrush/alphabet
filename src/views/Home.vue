@@ -143,7 +143,7 @@ export default {
   width: 300px;
   font-family: "Roboto Slab", serif;
   font-weight: 700;
-  font-size: 90pt;
+  font-size: 8rem;
   font-weight: bold;
   /* color: #c2c2c2; */
   color: #6c757d !important;
@@ -152,5 +152,6 @@ export default {
 
 #workGround div {
   text-align: center;
+  line-height: 1.2;
 }
 </style>

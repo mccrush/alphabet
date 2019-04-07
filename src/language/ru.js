@@ -21,5 +21,9 @@ export default {
     left: 'Л',
     right: 'П',
     both: 'О'
+  },
+  selectdelay: {
+    title: 'Задержка',
+    delay: 2000
   }
 }

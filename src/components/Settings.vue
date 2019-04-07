@@ -9,13 +9,11 @@
         </select>
       </div>
 
-      <!-- <div class="form-group">
-        <label for="selectshowtime">{{local.selectshowtime.title}}</label>
-        <select class="form-control form-control-sm" id="selectshowtime" v-model="showtime">
-          <option>{{local.selectshowtime.yes}}</option>
-          <option>{{local.selectshowtime.no}}</option>
-        </select>
-      </div>-->
+      <div class="form-group">
+        <label for="selectdelay">{{local.selectdelay.title}}</label>
+        <input class="form-control form-control-sm" type="number" id="selectdelay" min="1000" max="9000" step="500" v-model="delay">
+      </div>
+
       <button class="btn btn-success btn-block btn-sm" @click.prevent="saveSettings">{{local.buttonsave}}</button>
     </form>
     <div v-html="local.descriptionapp" class="mt-3"></div>
@@ -30,13 +28,15 @@ export default {
   data() {
     return {
       lang: "En",
-      settings: {}
+      settings: {},
+      delay: 2000
     };
   },
   created() {
     if (localStorage.getItem("settings")) {
       this.settings = JSON.parse(localStorage.getItem("settings"));
       this.lang = this.settings.language;
+      this.delay = this.settings.delay;
     } else {
     }
   },
@@ -46,7 +46,7 @@ export default {
       if (this.lang == "En") {
       } else {
       }
-
+      this.settings.delay = this.delay;
       localStorage.setItem("settings", JSON.stringify(this.settings));
       location.reload();
     }

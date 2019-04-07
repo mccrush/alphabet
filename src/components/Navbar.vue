@@ -15,11 +15,7 @@ export default {
       statusShow: false
     };
   },
-  created() {
-    // if (localStorage.getItem("showsettings")) {
-    //   this.showsettings = localStorage.getItem("showsettings");
-    // }
-  },
+  created() {},
   methods: {
     showSettings: function() {
       let settings = document.querySelector("#settings");

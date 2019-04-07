@@ -12,6 +12,6 @@ export default {
     buttoncloseforeve: 'Close forever',
     buttonclose: 'I understood'
   },
-  descriptionapp: '<small><p>This application contributes to the development of skills perception, concentration. It is necessary to say out loud the appearing letter and raise the indicated hand or both hands. At first glance, this may seem like a fairly simple exercise, but in reality everything turns out to be completely different.</p></small>',
+  descriptionapp: '<small><p>This application contributes to the development of skills perception, concentration.</p><p>It is necessary to say out loud the appearing letter and raise the indicated hand or both hands. At first glance, this may seem like a fairly simple exercise, but in reality everything turns out to be completely different.</p></small>',
   buttonsave: "Save"
 }

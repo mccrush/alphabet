@@ -18,7 +18,7 @@
       </div>-->
       <button class="btn btn-success btn-block btn-sm" @click.prevent="saveSettings">{{local.buttonsave}}</button>
     </form>
-    <div v-html="local.descriptionapp" class="mt-2"></div>
+    <div v-html="local.descriptionapp" class="mt-3"></div>
   </div>
 </template>
 

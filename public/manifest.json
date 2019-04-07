@@ -1,6 +1,6 @@
 {
-  "name": "alphabet",
-  "short_name": "alphabet",
+  "name": "Алфавит",
+  "short_name": "Алфавит",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

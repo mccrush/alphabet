@@ -1,6 +1,6 @@
 <template>
   <div>
-    <i class="material-icons md-48 full mr-3 mb-4" :title="local.fullscreen" data-toggle="tooltip" data-placement="left" @click="fullScreen">fullscreen</i>
+    <i class="material-icons md-48 full mr-3 mb-4" :title="local.fullscreen" data-toggle="tooltip" data-placement="left" @click="fullScreen">{{icon}}</i>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ export default {
   },
   data() {
     return {
-      fullscr: false
+      fullscr: false,
+      icon: "fullscreen"
     };
   },
   methods: {
@@ -27,6 +28,7 @@ export default {
     launchFullScreen(element) {
       if (element.webkitRequestFullScreen) {
         element.webkitRequestFullScreen();
+        this.icon = "fullscreen_exit";
         let navbarTop = document.querySelector("#navbarTop");
         navbarTop.style = "display: none;";
       }
@@ -34,6 +36,7 @@ export default {
     cancelFullscreen() {
       if (document.webkitCancelFullScreen) {
         document.webkitCancelFullScreen();
+        this.icon = "fullscreen";
         let navbarTop = document.querySelector("#navbarTop");
         navbarTop.style = "display: flex;";
       }

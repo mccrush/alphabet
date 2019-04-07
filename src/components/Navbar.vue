@@ -1,6 +1,6 @@
 <template>
   <nav id="navbarTop" class="navbar navbar-expand-lg navbar-light bg-white justify-content-between">
-    <img src="img/icons/favicon-32x32.png" width="32" height="32" :alt="local.titleapp">
+    <img src="img/icons/logo.svg" width="32" height="32" :alt="local.titleapp">
     <span class="font-roboto-slab">{{local.titleapp}}</span>
     <i class="material-icons md-24 btn btn-sm" :title="local.settings" data-toggle="tooltip" data-placement="left" @click="showSettings">settings</i>
   </nav>

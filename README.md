@@ -2,7 +2,7 @@
 
 **Тип:** веб-приложение
 
-**Адрес:** [mccrush.ru/app/ab](https://mccrush.ru/app/ab)
+**Адрес:** [mccrush.github.io/alphabet/](https://mccrush.github.io/alphabet/)
 
 **Версия:** 2.1.0 от 07.04.2019
 
